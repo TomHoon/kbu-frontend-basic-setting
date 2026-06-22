@@ -2,7 +2,7 @@ import axios from "axios";
 import { useUserStore } from "../store/UserStore";
 
 export const baseAPi = axios.create({
-  baseURL: "http://localhost:33000/api/v1",
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   withCredentials: true
 })
 

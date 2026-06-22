@@ -8,6 +8,10 @@ export default function ClientPostList() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
+
+		const jwtSecret =
+			process.env.JWT_SECRET;
+		console.log("jwtSecret", jwtSecret)
 		async function getPosts() {
 			const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 			const data: Post[] = await res.json();
