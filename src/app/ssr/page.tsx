@@ -2,7 +2,7 @@ import { getNow } from '@/app/lib/time';
 
 export const dynamic = 'force-dynamic';
 
-export default function SsrPage() {
+export default async function SsrPage() {
 	const now = getNow();
 
 	return (
