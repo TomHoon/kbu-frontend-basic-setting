@@ -31,10 +31,15 @@ export default function RootLayout({
 						<h1 className="text-[18px] font-bold">Next Practice</h1>
 
 						<nav className="flex gap-5 text-[13px] font-medium text-gray-600">
-							<Link href="/">Home</Link>
+							<a href="/">Home</a>
+							<a href="/posts">Posts</a>
+							<a href="/login">Login</a>
+							<a href="/mypage">My Page</a>
+
+							{/* <Link href="/">Home</Link>
 							<Link href="/posts">Posts</Link>
 							<Link href="/login">Login</Link>
-							<Link href="/mypage">My Page</Link>
+							<Link href="/mypage">My Page</Link> */}
 						</nav>
 					</div>
 				</header>
