@@ -1,16 +1,20 @@
 "use client"
 
 import ClientPostList from '@/app/components/ClientPostList';
+import { baseAPi } from '@/app/lib/baseApi';
 import { useUserStore } from '@/app/store/UserStore';
 import { useEffect } from 'react';
 
 export default function ClientFetchPage() {
 
 
-	const user = useUserStore(state => state.user);
+	const getEmployees = async () => {
+		const res = await baseAPi.get("/employees")
+	}
+
 	useEffect(() => {
-		console.log(user);
-	}, [user])
+		getEmployees();
+	}, []);
 
 	return (
 		<div className="rounded-lg border bg-white p-6">
